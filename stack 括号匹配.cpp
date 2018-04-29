@@ -10,14 +10,14 @@ int main()	{
 	if (judge(s))	cout <<"YES"<<endl;
 	else	cout <<"NO"<<endl;
 	return 0;
-}
+} 
 
 int judge(string s)	{
 	char* ps=(char*)s.c_str();
 	int i=0;
 	while (ps[i++]!='\0')	{
 		switch(ps[i])	{
-			case '(':case '[':case '{': sta.push(ps[i]);break;
+			case '(':case '[':case '{': sta.push(ps[i]);break;		//多重条件的case语句写法 
 			case ')':	{
 				if (!sta.empty()&&sta.top()=='(')	sta.pop();
 				else return 0;
